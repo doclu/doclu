@@ -1,0 +1,2511 @@
+---------------------------------------------------------------
+[ 2018-09-04T21:58:51+08:00 ] ::1 ::1 GET /public/
+[ info ] mesunlo.com/public/ [运行时间：0.229540s][吞吐率：4.36req/s] [内存消耗：3,310.05kb] [文件加载：52]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=411b2236705b9fbc8916f69c03568626',
+  'proxy-connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ /Applications/MAMP/htdocs/mesunglo/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/mesunglo/public/../application/index/view/index/index.html [ array (
+  0 => '_webset',
+  1 => '_cateData',
+  2 => '_allCateData',
+  3 => '_tagData',
+  4 => '_articleData',
+  5 => '_linkData',
+  6 => 'headConf',
+  7 => 'articleData',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003603s ] mysql:dbname=blog;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_webset` [ RunTime:0.016332s ]
+[ sql ] [ SQL ] SELECT `webset_name`,`webset_value` FROM `blog_webset` [ RunTime:0.003312s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_cate` [ RunTime:0.008646s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` WHERE  `cate_pid` = 0 ORDER BY cate_sort desc LIMIT 7 [ RunTime:0.005657s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` ORDER BY cate_sort desc [ RunTime:0.000417s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_tag` [ RunTime:0.008144s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_tag` [ RunTime:0.003148s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.011983s ]
+[ sql ] [ SQL ] SELECT `arc_id`,`arc_title`,`sendtime` FROM `blog_article` WHERE  `is_recycle` = 2 ORDER BY sendtime desc LIMIT 2 [ RunTime:0.000606s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_link` [ RunTime:0.008322s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_link` ORDER BY link_sort desc [ RunTime:0.002922s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 ORDER BY sendtime desc [ RunTime:0.004413s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_arc_tag` [ RunTime:0.007948s ]
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 4 [ RunTime:0.003368s ]
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 3 [ RunTime:0.000551s ]
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 2 [ RunTime:0.000360s ]
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 1 [ RunTime:0.000428s ]
+---------------------------------------------------------------
+[ 2018-09-04T21:58:55+08:00 ] ::1 ::1 GET /public/c/2.html
+[ info ] mesunlo.com/public/c/2.html [运行时间：0.148039s][吞吐率：6.75req/s] [内存消耗：3,708.51kb] [文件加载：54]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'lists',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=411b2236705b9fbc8916f69c03568626; Hm_lvt_88163e1d3a1f45ac8f9a37096b75c0a8=1536069532; Hm_lpvt_88163e1d3a1f45ac8f9a37096b75c0a8=1536069532',
+  'proxy-connection' => 'keep-alive',
+  'referer' => 'http://mesunlo.com/public/',
+  'upgrade-insecure-requests' => '1',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+  'cate_id' => '2',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Lists->index[ /Applications/MAMP/htdocs/mesunglo/application/index/controller/Lists.php ]
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/mesunglo/public/../application/index/view/lists/index.html [ array (
+  0 => '_webset',
+  1 => '_cateData',
+  2 => '_allCateData',
+  3 => '_tagData',
+  4 => '_articleData',
+  5 => '_linkData',
+  6 => 'headConf',
+  7 => 'headData',
+  8 => 'articleData',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000562s ] mysql:dbname=blog;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_webset` [ RunTime:0.006790s ]
+[ sql ] [ SQL ] SELECT `webset_name`,`webset_value` FROM `blog_webset` [ RunTime:0.000359s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_cate` [ RunTime:0.009807s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` WHERE  `cate_pid` = 0 ORDER BY cate_sort desc LIMIT 7 [ RunTime:0.000557s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` ORDER BY cate_sort desc [ RunTime:0.000452s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_tag` [ RunTime:0.007013s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_tag` [ RunTime:0.000382s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.010074s ]
+[ sql ] [ SQL ] SELECT `arc_id`,`arc_title`,`sendtime` FROM `blog_article` WHERE  `is_recycle` = 2 ORDER BY sendtime desc LIMIT 2 [ RunTime:0.000397s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_link` [ RunTime:0.010144s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_link` ORDER BY link_sort desc [ RunTime:0.000584s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` [ RunTime:0.000370s ]
+[ sql ] [ SQL ] SELECT `cate_name` FROM `blog_cate` WHERE  `cate_id` = 2 LIMIT 1 [ RunTime:0.002373s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_article` WHERE  `cate_id` IN (3,4,10,2) LIMIT 1 [ RunTime:0.008826s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2  AND `a`.`cate_id` IN (3,4,10,'2') [ RunTime:0.000783s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_arc_tag` [ RunTime:0.006756s ]
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 1 [ RunTime:0.000358s ]
+---------------------------------------------------------------
+[ 2018-09-04T21:58:56+08:00 ] ::1 ::1 GET /public/c/9.html
+[ info ] mesunlo.com/public/c/9.html [运行时间：0.121918s][吞吐率：8.20req/s] [内存消耗：3,494.19kb] [文件加载：52]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'lists',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=411b2236705b9fbc8916f69c03568626; Hm_lvt_88163e1d3a1f45ac8f9a37096b75c0a8=1536069532; Hm_lpvt_88163e1d3a1f45ac8f9a37096b75c0a8=1536069536',
+  'proxy-connection' => 'keep-alive',
+  'referer' => 'http://mesunlo.com/public/c/2.html',
+  'upgrade-insecure-requests' => '1',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+  'cate_id' => '9',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Lists->index[ /Applications/MAMP/htdocs/mesunglo/application/index/controller/Lists.php ]
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/mesunglo/public/../application/index/view/lists/index.html [ array (
+  0 => '_webset',
+  1 => '_cateData',
+  2 => '_allCateData',
+  3 => '_tagData',
+  4 => '_articleData',
+  5 => '_linkData',
+  6 => 'headConf',
+  7 => 'headData',
+  8 => 'articleData',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000373s ] mysql:dbname=blog;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_webset` [ RunTime:0.010551s ]
+[ sql ] [ SQL ] SELECT `webset_name`,`webset_value` FROM `blog_webset` [ RunTime:0.000355s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_cate` [ RunTime:0.006984s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` WHERE  `cate_pid` = 0 ORDER BY cate_sort desc LIMIT 7 [ RunTime:0.000400s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` ORDER BY cate_sort desc [ RunTime:0.000345s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_tag` [ RunTime:0.006578s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_tag` [ RunTime:0.000358s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.010256s ]
+[ sql ] [ SQL ] SELECT `arc_id`,`arc_title`,`sendtime` FROM `blog_article` WHERE  `is_recycle` = 2 ORDER BY sendtime desc LIMIT 2 [ RunTime:0.000478s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_link` [ RunTime:0.009917s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_link` ORDER BY link_sort desc [ RunTime:0.000356s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` [ RunTime:0.000327s ]
+[ sql ] [ SQL ] SELECT `cate_name` FROM `blog_cate` WHERE  `cate_id` = 9 LIMIT 1 [ RunTime:0.000394s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_article` WHERE  `cate_id` IN (9) LIMIT 1 [ RunTime:0.000362s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2  AND `a`.`cate_id` IN ('9') [ RunTime:0.000512s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_arc_tag` [ RunTime:0.006628s ]
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 3 [ RunTime:0.000588s ]
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 4 [ RunTime:0.000341s ]
+---------------------------------------------------------------
+[ 2018-09-04T21:58:57+08:00 ] ::1 ::1 GET /public/c/2.html
+[ info ] mesunlo.com/public/c/2.html [运行时间：0.130901s][吞吐率：7.64req/s] [内存消耗：3,497.44kb] [文件加载：52]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'lists',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=411b2236705b9fbc8916f69c03568626; Hm_lvt_88163e1d3a1f45ac8f9a37096b75c0a8=1536069532; Hm_lpvt_88163e1d3a1f45ac8f9a37096b75c0a8=1536069537',
+  'proxy-connection' => 'keep-alive',
+  'referer' => 'http://mesunlo.com/public/c/9.html',
+  'upgrade-insecure-requests' => '1',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+  'cate_id' => '2',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Lists->index[ /Applications/MAMP/htdocs/mesunglo/application/index/controller/Lists.php ]
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/mesunglo/public/../application/index/view/lists/index.html [ array (
+  0 => '_webset',
+  1 => '_cateData',
+  2 => '_allCateData',
+  3 => '_tagData',
+  4 => '_articleData',
+  5 => '_linkData',
+  6 => 'headConf',
+  7 => 'headData',
+  8 => 'articleData',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000439s ] mysql:dbname=blog;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_webset` [ RunTime:0.009958s ]
+[ sql ] [ SQL ] SELECT `webset_name`,`webset_value` FROM `blog_webset` [ RunTime:0.000579s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_cate` [ RunTime:0.010297s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` WHERE  `cate_pid` = 0 ORDER BY cate_sort desc LIMIT 7 [ RunTime:0.001016s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` ORDER BY cate_sort desc [ RunTime:0.000714s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_tag` [ RunTime:0.010262s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_tag` [ RunTime:0.000433s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.010637s ]
+[ sql ] [ SQL ] SELECT `arc_id`,`arc_title`,`sendtime` FROM `blog_article` WHERE  `is_recycle` = 2 ORDER BY sendtime desc LIMIT 2 [ RunTime:0.000480s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_link` [ RunTime:0.009822s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_link` ORDER BY link_sort desc [ RunTime:0.000423s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` [ RunTime:0.000368s ]
+[ sql ] [ SQL ] SELECT `cate_name` FROM `blog_cate` WHERE  `cate_id` = 2 LIMIT 1 [ RunTime:0.000290s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_article` WHERE  `cate_id` IN (3,4,10,2) LIMIT 1 [ RunTime:0.000357s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2  AND `a`.`cate_id` IN (3,4,10,'2') [ RunTime:0.000504s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_arc_tag` [ RunTime:0.006801s ]
+[ sql ] [ SQL ] SELECT `t`.`tag_id`,`t`.`tag_name` FROM `blog_arc_tag` `at` INNER JOIN `blog_tag` `t` ON `at`.`tag_id`=`t`.`tag_id` WHERE  `at`.`arc_id` = 1 [ RunTime:0.000448s ]
+---------------------------------------------------------------
+[ 2018-09-04T22:00:11+08:00 ] ::1 ::1 GET /public/index.php/admin/article/index.html
+[ info ] mesunlo.com/public/index.php/admin/article/index.html [运行时间：0.069678s][吞吐率：14.35req/s] [内存消耗：3,374.95kb] [文件加载：52]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'upgrade-insecure-requests' => '1',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-04T22:00:11+08:00 ] ::1 ::1 GET /public/index.php/admin/login/login.html
+[ info ] mesunlo.com/public/index.php/admin/login/login.html [运行时间：0.046642s][吞吐率：21.44req/s] [内存消耗：2,202.40kb] [文件加载：44]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'cookie' => 'PHPSESSID=81548217e51937f5c6b65a69705d4aa5',
+  'upgrade-insecure-requests' => '1',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ /Applications/MAMP/htdocs/mesunglo/application/admin/controller/Login.php ]
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/mesunglo/public/../application/admin/view/login/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-04T22:00:12+08:00 ] ::1 ::1 GET /public/static/admin/admin.ui/js/slimscroll/jquery.slimscroll.min.js
+[ info ] mesunlo.com/public/static/admin/admin.ui/js/slimscroll/jquery.slimscroll.min.js [运行时间：0.063564s][吞吐率：15.73req/s] [内存消耗：1,610.69kb] [文件加载：36]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'admin.ui',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'cookie' => 'PHPSESSID=81548217e51937f5c6b65a69705d4aa5',
+  'referer' => 'http://mesunlo.com/public/index.php/admin/login/login.html',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+  'js' => 'slimscroll',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-04T22:00:12+08:00 ] ::1 ::1 GET /public/index.php/captcha.html
+[ info ] mesunlo.com/public/index.php/captcha.html [运行时间：0.100410s][吞吐率：9.96req/s] [内存消耗：1,640.70kb] [文件加载：35]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'cookie' => 'PHPSESSID=81548217e51937f5c6b65a69705d4aa5',
+  'referer' => 'http://mesunlo.com/public/index.php/admin/login/login.html',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ /Applications/MAMP/htdocs/mesunglo/vendor/topthink/think-captcha/src/CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-04T22:00:12+08:00 ] ::1 ::1 GET /public/static/admin/admin.ui/js/slimscroll/jquery.slimscroll.min.js
+[ info ] mesunlo.com/public/static/admin/admin.ui/js/slimscroll/jquery.slimscroll.min.js [运行时间：0.035974s][吞吐率：27.80req/s] [内存消耗：1,610.58kb] [文件加载：36]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'admin.ui',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'cookie' => 'PHPSESSID=81548217e51937f5c6b65a69705d4aa5',
+  'referer' => 'http://mesunlo.com/public/index.php/admin/login/login.html',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+  'js' => 'slimscroll',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-04T22:00:24+08:00 ] ::1 ::1 POST /public/index.php/admin/login/login.html
+[ info ] mesunlo.com/public/index.php/admin/login/login.html [运行时间：0.093406s][吞吐率：10.71req/s] [内存消耗：3,645.20kb] [文件加载：59]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'content-length' => '49',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'cookie' => 'PHPSESSID=81548217e51937f5c6b65a69705d4aa5',
+  'referer' => 'http://mesunlo.com/public/index.php/admin/login/login.html',
+  'upgrade-insecure-requests' => '1',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+  'admin_username' => 'admin',
+  'admin_password' => 'admin',
+  'code' => 'v3',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ /Applications/MAMP/htdocs/mesunglo/application/admin/controller/Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/mesunglo/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000617s ] mysql:dbname=blog;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_admin` [ RunTime:0.008238s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_admin` WHERE  `admin_username` = 'admin'  AND `admin_password` = 'gKjd5W7T3zzGPZJBiKMv5Q==' LIMIT 1 [ RunTime:0.002689s ]
+---------------------------------------------------------------
+[ 2018-09-04T22:00:28+08:00 ] ::1 ::1 GET /public/index.php/admin/login/login.html
+[ info ] mesunlo.com/public/index.php/admin/login/login.html [运行时间：0.038122s][吞吐率：26.23req/s] [内存消耗：2,010.96kb] [文件加载：42]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'cookie' => 'PHPSESSID=81548217e51937f5c6b65a69705d4aa5',
+  'upgrade-insecure-requests' => '1',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ /Applications/MAMP/htdocs/mesunglo/application/admin/controller/Login.php ]
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/mesunglo/public/../application/admin/view/login/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-04T22:00:28+08:00 ] ::1 ::1 GET /public/index.php/captcha.html
+[ info ] mesunlo.com/public/index.php/captcha.html [运行时间：0.054241s][吞吐率：18.44req/s] [内存消耗：1,640.75kb] [文件加载：35]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'cookie' => 'PHPSESSID=81548217e51937f5c6b65a69705d4aa5',
+  'referer' => 'http://mesunlo.com/public/index.php/admin/login/login.html',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ /Applications/MAMP/htdocs/mesunglo/vendor/topthink/think-captcha/src/CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-04T22:01:05+08:00 ] ::1 ::1 POST /public/index.php/admin/login/login.html
+[ info ] mesunlo.com/public/index.php/admin/login/login.html [运行时间：0.066644s][吞吐率：15.01req/s] [内存消耗：3,336.72kb] [文件加载：52]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'content-length' => '41',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'cookie' => 'PHPSESSID=81548217e51937f5c6b65a69705d4aa5',
+  'referer' => 'http://mesunlo.com/public/index.php/admin/login/login.html',
+  'upgrade-insecure-requests' => '1',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+  'admin_username' => 'a',
+  'admin_password' => 'a',
+  'code' => 'v3',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ /Applications/MAMP/htdocs/mesunglo/application/admin/controller/Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/mesunglo/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-04T22:01:08+08:00 ] ::1 ::1 GET /public/index.php/admin/login/login.html
+[ info ] mesunlo.com/public/index.php/admin/login/login.html [运行时间：0.048480s][吞吐率：20.63req/s] [内存消耗：2,010.96kb] [文件加载：42]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'cookie' => 'PHPSESSID=81548217e51937f5c6b65a69705d4aa5',
+  'upgrade-insecure-requests' => '1',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ /Applications/MAMP/htdocs/mesunglo/application/admin/controller/Login.php ]
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/mesunglo/public/../application/admin/view/login/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-04T22:01:08+08:00 ] ::1 ::1 GET /public/index.php/captcha.html
+[ info ] mesunlo.com/public/index.php/captcha.html [运行时间：0.065157s][吞吐率：15.35req/s] [内存消耗：1,640.38kb] [文件加载：35]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'cookie' => 'PHPSESSID=81548217e51937f5c6b65a69705d4aa5',
+  'referer' => 'http://mesunlo.com/public/index.php/admin/login/login.html',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ /Applications/MAMP/htdocs/mesunglo/vendor/topthink/think-captcha/src/CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-04T22:01:14+08:00 ] ::1 ::1 POST /public/index.php/admin/login/login.html
+[ info ] mesunlo.com/public/index.php/admin/login/login.html [运行时间：0.083889s][吞吐率：11.92req/s] [内存消耗：3,455.71kb] [文件加载：57]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'content-length' => '41',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'cookie' => 'PHPSESSID=81548217e51937f5c6b65a69705d4aa5',
+  'referer' => 'http://mesunlo.com/public/index.php/admin/login/login.html',
+  'upgrade-insecure-requests' => '1',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+  'admin_username' => 'a',
+  'admin_password' => 'a',
+  'code' => 'vw',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ /Applications/MAMP/htdocs/mesunglo/application/admin/controller/Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/mesunglo/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000541s ] mysql:dbname=blog;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_admin` [ RunTime:0.010611s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_admin` WHERE  `admin_username` = 'a'  AND `admin_password` = 'rX8ExI5J8GQYk7LGiGL0kQ==' LIMIT 1 [ RunTime:0.000598s ]
+---------------------------------------------------------------
+[ 2018-09-04T22:01:18+08:00 ] ::1 ::1 GET /public/index.php/admin/login/login.html
+[ info ] mesunlo.com/public/index.php/admin/login/login.html [运行时间：0.036055s][吞吐率：27.74req/s] [内存消耗：2,010.96kb] [文件加载：42]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'cookie' => 'PHPSESSID=81548217e51937f5c6b65a69705d4aa5',
+  'upgrade-insecure-requests' => '1',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ /Applications/MAMP/htdocs/mesunglo/application/admin/controller/Login.php ]
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/mesunglo/public/../application/admin/view/login/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-04T22:01:18+08:00 ] ::1 ::1 GET /public/index.php/captcha.html
+[ info ] mesunlo.com/public/index.php/captcha.html [运行时间：0.060775s][吞吐率：16.45req/s] [内存消耗：1,640.34kb] [文件加载：35]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'cookie' => 'PHPSESSID=81548217e51937f5c6b65a69705d4aa5',
+  'referer' => 'http://mesunlo.com/public/index.php/admin/login/login.html',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ /Applications/MAMP/htdocs/mesunglo/vendor/topthink/think-captcha/src/CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-04T22:01:45+08:00 ] ::1 ::1 POST /public/index.php/admin/login/login.html
+[ info ] mesunlo.com/public/index.php/admin/login/login.html [运行时间：0.060735s][吞吐率：16.46req/s] [内存消耗：3,336.63kb] [文件加载：52]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'content-length' => '49',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'cookie' => 'PHPSESSID=81548217e51937f5c6b65a69705d4aa5',
+  'referer' => 'http://mesunlo.com/public/index.php/admin/login/login.html',
+  'upgrade-insecure-requests' => '1',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+  'admin_username' => 'admin',
+  'admin_password' => 'admin',
+  'code' => 'it',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ /Applications/MAMP/htdocs/mesunglo/application/admin/controller/Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/mesunglo/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-04T22:01:48+08:00 ] ::1 ::1 GET /public/index.php/admin/login/login.html
+[ info ] mesunlo.com/public/index.php/admin/login/login.html [运行时间：0.040589s][吞吐率：24.64req/s] [内存消耗：2,010.96kb] [文件加载：42]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'cookie' => 'PHPSESSID=81548217e51937f5c6b65a69705d4aa5',
+  'upgrade-insecure-requests' => '1',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ /Applications/MAMP/htdocs/mesunglo/application/admin/controller/Login.php ]
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/mesunglo/public/../application/admin/view/login/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-04T22:01:48+08:00 ] ::1 ::1 GET /public/index.php/captcha.html
+[ info ] mesunlo.com/public/index.php/captcha.html [运行时间：0.053019s][吞吐率：18.86req/s] [内存消耗：1,640.41kb] [文件加载：35]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'cookie' => 'PHPSESSID=81548217e51937f5c6b65a69705d4aa5',
+  'referer' => 'http://mesunlo.com/public/index.php/admin/login/login.html',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ /Applications/MAMP/htdocs/mesunglo/vendor/topthink/think-captcha/src/CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-04T22:01:57+08:00 ] ::1 ::1 POST /public/index.php/admin/login/login.html
+[ info ] mesunlo.com/public/index.php/admin/login/login.html [运行时间：0.076558s][吞吐率：13.06req/s] [内存消耗：3,455.80kb] [文件加载：57]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'content-length' => '49',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'cookie' => 'PHPSESSID=81548217e51937f5c6b65a69705d4aa5',
+  'referer' => 'http://mesunlo.com/public/index.php/admin/login/login.html',
+  'upgrade-insecure-requests' => '1',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+  'admin_username' => 'admin',
+  'admin_password' => 'admin',
+  'code' => '8t',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ /Applications/MAMP/htdocs/mesunglo/application/admin/controller/Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/mesunglo/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000715s ] mysql:dbname=blog;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_admin` [ RunTime:0.007112s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_admin` WHERE  `admin_username` = 'admin'  AND `admin_password` = 'gKjd5W7T3zzGPZJBiKMv5Q==' LIMIT 1 [ RunTime:0.000892s ]
+---------------------------------------------------------------
+[ 2018-09-04T22:02:00+08:00 ] ::1 ::1 GET /public/index.php/admin/login/login.html
+[ info ] mesunlo.com/public/index.php/admin/login/login.html [运行时间：0.041844s][吞吐率：23.90req/s] [内存消耗：2,010.96kb] [文件加载：42]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'cookie' => 'PHPSESSID=81548217e51937f5c6b65a69705d4aa5',
+  'upgrade-insecure-requests' => '1',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ /Applications/MAMP/htdocs/mesunglo/application/admin/controller/Login.php ]
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/mesunglo/public/../application/admin/view/login/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-04T22:02:00+08:00 ] ::1 ::1 GET /public/index.php/captcha.html
+[ info ] mesunlo.com/public/index.php/captcha.html [运行时间：0.058583s][吞吐率：17.07req/s] [内存消耗：1,640.35kb] [文件加载：35]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'cookie' => 'PHPSESSID=81548217e51937f5c6b65a69705d4aa5',
+  'referer' => 'http://mesunlo.com/public/index.php/admin/login/login.html',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ /Applications/MAMP/htdocs/mesunglo/vendor/topthink/think-captcha/src/CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-04T22:03:34+08:00 ] ::1 ::1 POST /public/index.php/admin/login/login.html
+[ info ] mesunlo.com/public/index.php/admin/login/login.html [运行时间：0.092627s][吞吐率：10.80req/s] [内存消耗：3,537.66kb] [文件加载：58]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'content-length' => '52',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'cookie' => 'PHPSESSID=81548217e51937f5c6b65a69705d4aa5',
+  'referer' => 'http://mesunlo.com/public/index.php/admin/login/login.html',
+  'upgrade-insecure-requests' => '1',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+  'admin_username' => 'admin',
+  'admin_password' => 'admin888',
+  'code' => 'ha',
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ /Applications/MAMP/htdocs/mesunglo/application/admin/controller/Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/mesunglo/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000445s ] mysql:dbname=blog;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_admin` [ RunTime:0.006829s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_admin` WHERE  `admin_username` = 'admin'  AND `admin_password` = 'h3vPU8JGuF3VS/uxIpjRSw==' LIMIT 1 [ RunTime:0.004330s ]
+---------------------------------------------------------------
+[ 2018-09-04T22:03:37+08:00 ] ::1 ::1 GET /public/index.php/admin/entry/index.html
+[ info ] mesunlo.com/public/index.php/admin/entry/index.html [运行时间：0.047214s][吞吐率：21.18req/s] [内存消耗：2,237.17kb] [文件加载：45]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'entry',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'cookie' => 'PHPSESSID=81548217e51937f5c6b65a69705d4aa5',
+  'referer' => 'http://mesunlo.com/public/index.php/admin/login/login.html',
+  'upgrade-insecure-requests' => '1',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Entry->index[ /Applications/MAMP/htdocs/mesunglo/application/admin/controller/Entry.php ]
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/mesunglo/public/../application/admin/view/entry/index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-04T22:03:40+08:00 ] ::1 ::1 GET /public/index.php/admin/tag/index.html
+[ info ] mesunlo.com/public/index.php/admin/tag/index.html [运行时间：0.092170s][吞吐率：10.85req/s] [内存消耗：3,776.31kb] [文件加载：57]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'tag',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'cookie' => 'PHPSESSID=81548217e51937f5c6b65a69705d4aa5',
+  'referer' => 'http://mesunlo.com/public/index.php/admin/entry/index.html',
+  'upgrade-insecure-requests' => '1',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Tag->index[ /Applications/MAMP/htdocs/mesunglo/application/admin/controller/Tag.php ]
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/mesunglo/public/../application/admin/view/tag/index.html [ array (
+  0 => 'field',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000359s ] mysql:dbname=blog;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_tag` [ RunTime:0.013418s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_tag` LIMIT 1 [ RunTime:0.000581s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_tag` LIMIT 0,5 [ RunTime:0.000401s ]
+---------------------------------------------------------------
+[ 2018-09-04T22:03:46+08:00 ] ::1 ::1 GET /public/index.php/admin/tag/del.html?tag_id=5
+[ info ] mesunlo.com/public/index.php/admin/tag/del.html?tag_id=5 [运行时间：0.091695s][吞吐率：10.91req/s] [内存消耗：3,499.84kb] [文件加载：56]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'tag',
+    2 => 'del',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'cookie' => 'PHPSESSID=81548217e51937f5c6b65a69705d4aa5',
+  'referer' => 'http://mesunlo.com/public/index.php/admin/tag/index.html',
+  'upgrade-insecure-requests' => '1',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+  'tag_id' => '5',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Tag->del[ /Applications/MAMP/htdocs/mesunglo/application/admin/controller/Tag.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/mesunglo/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000615s ] mysql:dbname=blog;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_tag` [ RunTime:0.008022s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_tag` WHERE  `tag_id` = 5 [ RunTime:0.000851s ]
+[ sql ] [ SQL ] DELETE FROM `blog_tag`    WHERE  `tag_id` = 5 [ RunTime:0.003599s ]
+---------------------------------------------------------------
+[ 2018-09-04T22:03:49+08:00 ] ::1 ::1 GET /public/index.php/admin/tag/index.html
+[ info ] mesunlo.com/public/index.php/admin/tag/index.html [运行时间：0.082492s][吞吐率：12.12req/s] [内存消耗：3,553.79kb] [文件加载：55]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'tag',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'cookie' => 'PHPSESSID=81548217e51937f5c6b65a69705d4aa5',
+  'referer' => 'http://mesunlo.com/public/index.php/admin/tag/del.html?tag_id=5',
+  'upgrade-insecure-requests' => '1',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Tag->index[ /Applications/MAMP/htdocs/mesunglo/application/admin/controller/Tag.php ]
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/mesunglo/public/../application/admin/view/tag/index.html [ array (
+  0 => 'field',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000628s ] mysql:dbname=blog;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_tag` [ RunTime:0.004883s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_tag` LIMIT 1 [ RunTime:0.000316s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_tag` LIMIT 0,5 [ RunTime:0.000503s ]
+---------------------------------------------------------------
+[ 2018-09-04T22:04:00+08:00 ] ::1 ::1 GET /public/index.php/admin/tag/del.html?tag_id=11
+[ info ] mesunlo.com/public/index.php/admin/tag/del.html?tag_id=11 [运行时间：0.094301s][吞吐率：10.60req/s] [内存消耗：3,499.85kb] [文件加载：56]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'tag',
+    2 => 'del',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'cookie' => 'PHPSESSID=81548217e51937f5c6b65a69705d4aa5',
+  'referer' => 'http://mesunlo.com/public/index.php/admin/tag/index.html',
+  'upgrade-insecure-requests' => '1',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+  'tag_id' => '11',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Tag->del[ /Applications/MAMP/htdocs/mesunglo/application/admin/controller/Tag.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/mesunglo/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000389s ] mysql:dbname=blog;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_tag` [ RunTime:0.011286s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_tag` WHERE  `tag_id` = 11 [ RunTime:0.001166s ]
+[ sql ] [ SQL ] DELETE FROM `blog_tag`    WHERE  `tag_id` = 11 [ RunTime:0.000384s ]
+---------------------------------------------------------------
+[ 2018-09-04T22:04:03+08:00 ] ::1 ::1 GET /public/index.php/admin/tag/index.html
+[ info ] mesunlo.com/public/index.php/admin/tag/index.html [运行时间：0.074001s][吞吐率：13.51req/s] [内存消耗：3,552.83kb] [文件加载：55]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'tag',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'cookie' => 'PHPSESSID=81548217e51937f5c6b65a69705d4aa5',
+  'referer' => 'http://mesunlo.com/public/index.php/admin/tag/del.html?tag_id=11',
+  'upgrade-insecure-requests' => '1',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Tag->index[ /Applications/MAMP/htdocs/mesunglo/application/admin/controller/Tag.php ]
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/mesunglo/public/../application/admin/view/tag/index.html [ array (
+  0 => 'field',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000494s ] mysql:dbname=blog;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_tag` [ RunTime:0.005009s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_tag` LIMIT 1 [ RunTime:0.000257s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_tag` LIMIT 0,5 [ RunTime:0.000562s ]
+---------------------------------------------------------------
+[ 2018-09-04T22:04:08+08:00 ] ::1 ::1 GET /public/index.php/admin/article/index.html
+[ info ] mesunlo.com/public/index.php/admin/article/index.html [运行时间：0.089388s][吞吐率：11.19req/s] [内存消耗：3,830.13kb] [文件加载：57]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'cookie' => 'PHPSESSID=81548217e51937f5c6b65a69705d4aa5',
+  'referer' => 'http://mesunlo.com/public/index.php/admin/tag/index.html',
+  'upgrade-insecure-requests' => '1',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->index[ /Applications/MAMP/htdocs/mesunglo/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/mesunglo/public/../application/admin/view/article/index.html [ array (
+  0 => 'field',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000357s ] mysql:dbname=blog;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.015243s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 LIMIT 1 [ RunTime:0.000445s ]
+[ sql ] [ SQL ] SELECT `a`.`arc_id`,`a`.`arc_title`,`a`.`arc_author`,`a`.`sendtime`,`c`.`cate_name`,`a`.`arc_sort` FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 ORDER BY a.arc_sort desc,a.sendtime desc,a.arc_id desc LIMIT 0,5 [ RunTime:0.000324s ]
+---------------------------------------------------------------
+[ 2018-09-04T22:04:12+08:00 ] ::1 ::1 GET /public/index.php/admin/tag/index.html
+[ info ] mesunlo.com/public/index.php/admin/tag/index.html [运行时间：0.077161s][吞吐率：12.96req/s] [内存消耗：3,553.05kb] [文件加载：55]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'tag',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'cookie' => 'PHPSESSID=81548217e51937f5c6b65a69705d4aa5',
+  'referer' => 'http://mesunlo.com/public/index.php/admin/article/index.html',
+  'upgrade-insecure-requests' => '1',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Tag->index[ /Applications/MAMP/htdocs/mesunglo/application/admin/controller/Tag.php ]
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/mesunglo/public/../application/admin/view/tag/index.html [ array (
+  0 => 'field',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000334s ] mysql:dbname=blog;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_tag` [ RunTime:0.007087s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_tag` LIMIT 1 [ RunTime:0.000205s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_tag` LIMIT 0,5 [ RunTime:0.000207s ]
+---------------------------------------------------------------
+[ 2018-09-04T22:04:16+08:00 ] ::1 ::1 GET /public/index.php/admin/article/index.html
+[ info ] mesunlo.com/public/index.php/admin/article/index.html [运行时间：0.079593s][吞吐率：12.56req/s] [内存消耗：3,606.01kb] [文件加载：55]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'cookie' => 'PHPSESSID=81548217e51937f5c6b65a69705d4aa5',
+  'referer' => 'http://mesunlo.com/public/index.php/admin/tag/index.html',
+  'upgrade-insecure-requests' => '1',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->index[ /Applications/MAMP/htdocs/mesunglo/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/mesunglo/public/../application/admin/view/article/index.html [ array (
+  0 => 'field',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000364s ] mysql:dbname=blog;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.010367s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 LIMIT 1 [ RunTime:0.000570s ]
+[ sql ] [ SQL ] SELECT `a`.`arc_id`,`a`.`arc_title`,`a`.`arc_author`,`a`.`sendtime`,`c`.`cate_name`,`a`.`arc_sort` FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 ORDER BY a.arc_sort desc,a.sendtime desc,a.arc_id desc LIMIT 0,5 [ RunTime:0.000657s ]
+---------------------------------------------------------------
+[ 2018-09-04T22:10:55+08:00 ] ::1 ::1 GET /public/index.php/admin/article/index.html
+[ info ] mesunlo.com/public/index.php/admin/article/index.html [运行时间：0.083684s][吞吐率：11.95req/s] [内存消耗：3,806.42kb] [文件加载：57]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'cache-control' => 'max-age=0',
+  'cookie' => 'PHPSESSID=81548217e51937f5c6b65a69705d4aa5',
+  'referer' => 'http://mesunlo.com/public/index.php/admin/tag/index.html',
+  'upgrade-insecure-requests' => '1',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->index[ /Applications/MAMP/htdocs/mesunglo/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/mesunglo/public/../application/admin/view/article/index.html [ array (
+  0 => 'field',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000362s ] mysql:dbname=blog;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.010169s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 LIMIT 1 [ RunTime:0.000912s ]
+[ sql ] [ SQL ] SELECT `a`.`arc_id`,`a`.`arc_title`,`a`.`arc_author`,`a`.`sendtime`,`c`.`cate_name`,`a`.`arc_sort` FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 ORDER BY a.arc_sort desc,a.sendtime desc,a.arc_id desc LIMIT 0,5 [ RunTime:0.000455s ]
+---------------------------------------------------------------
+[ 2018-09-04T22:15:41+08:00 ] ::1 ::1 GET /public/index.php/admin/article/index.html
+[ info ] mesunlo.com/public/index.php/admin/article/index.html [运行时间：0.097391s][吞吐率：10.27req/s] [内存消耗：3,806.42kb] [文件加载：57]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'cache-control' => 'max-age=0',
+  'cookie' => 'PHPSESSID=81548217e51937f5c6b65a69705d4aa5',
+  'referer' => 'http://mesunlo.com/public/index.php/admin/tag/index.html',
+  'upgrade-insecure-requests' => '1',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->index[ /Applications/MAMP/htdocs/mesunglo/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/mesunglo/public/../application/admin/view/article/index.html [ array (
+  0 => 'field',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000626s ] mysql:dbname=blog;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.015032s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 LIMIT 1 [ RunTime:0.000570s ]
+[ sql ] [ SQL ] SELECT `a`.`arc_id`,`a`.`arc_title`,`a`.`arc_author`,`a`.`sendtime`,`c`.`cate_name`,`a`.`arc_sort` FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 ORDER BY a.arc_sort desc,a.sendtime desc,a.arc_id desc LIMIT 0,5 [ RunTime:0.000643s ]
+---------------------------------------------------------------
+[ 2018-09-04T22:20:24+08:00 ] ::1 ::1 GET /public/index.php/admin/article/index.html
+[ info ] mesunlo.com/public/index.php/admin/article/index.html [运行时间：0.090096s][吞吐率：11.10req/s] [内存消耗：3,590.41kb] [文件加载：55]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'cache-control' => 'max-age=0',
+  'cookie' => 'PHPSESSID=81548217e51937f5c6b65a69705d4aa5',
+  'referer' => 'http://mesunlo.com/public/index.php/admin/tag/index.html',
+  'upgrade-insecure-requests' => '1',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->index[ /Applications/MAMP/htdocs/mesunglo/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/mesunglo/public/../application/admin/view/article/index.html [ array (
+  0 => 'field',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000530s ] mysql:dbname=blog;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.014816s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 LIMIT 1 [ RunTime:0.000488s ]
+[ sql ] [ SQL ] SELECT `a`.`arc_id`,`a`.`arc_title`,`a`.`arc_author`,`a`.`sendtime`,`c`.`cate_name`,`a`.`arc_sort` FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 ORDER BY a.arc_sort desc,a.sendtime desc,a.arc_id desc LIMIT 0,5 [ RunTime:0.000449s ]
+---------------------------------------------------------------
+[ 2018-09-04T22:20:26+08:00 ] ::1 ::1 GET /public/index.php/admin/article/index.html
+[ info ] mesunlo.com/public/index.php/admin/article/index.html [运行时间：0.081505s][吞吐率：12.27req/s] [内存消耗：3,590.14kb] [文件加载：55]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'cache-control' => 'max-age=0',
+  'cookie' => 'PHPSESSID=81548217e51937f5c6b65a69705d4aa5',
+  'referer' => 'http://mesunlo.com/public/index.php/admin/tag/index.html',
+  'upgrade-insecure-requests' => '1',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->index[ /Applications/MAMP/htdocs/mesunglo/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/mesunglo/public/../application/admin/view/article/index.html [ array (
+  0 => 'field',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000525s ] mysql:dbname=blog;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.009955s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 LIMIT 1 [ RunTime:0.000703s ]
+[ sql ] [ SQL ] SELECT `a`.`arc_id`,`a`.`arc_title`,`a`.`arc_author`,`a`.`sendtime`,`c`.`cate_name`,`a`.`arc_sort` FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 ORDER BY a.arc_sort desc,a.sendtime desc,a.arc_id desc LIMIT 0,5 [ RunTime:0.000460s ]
+---------------------------------------------------------------
+[ 2018-09-04T22:20:27+08:00 ] ::1 ::1 GET /public/index.php/admin/article/index.html
+[ info ] mesunlo.com/public/index.php/admin/article/index.html [运行时间：0.085568s][吞吐率：11.69req/s] [内存消耗：3,590.14kb] [文件加载：55]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'cache-control' => 'max-age=0',
+  'cookie' => 'PHPSESSID=81548217e51937f5c6b65a69705d4aa5',
+  'referer' => 'http://mesunlo.com/public/index.php/admin/tag/index.html',
+  'upgrade-insecure-requests' => '1',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->index[ /Applications/MAMP/htdocs/mesunglo/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/mesunglo/public/../application/admin/view/article/index.html [ array (
+  0 => 'field',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000323s ] mysql:dbname=blog;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.010005s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 LIMIT 1 [ RunTime:0.001239s ]
+[ sql ] [ SQL ] SELECT `a`.`arc_id`,`a`.`arc_title`,`a`.`arc_author`,`a`.`sendtime`,`c`.`cate_name`,`a`.`arc_sort` FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 ORDER BY a.arc_sort desc,a.sendtime desc,a.arc_id desc LIMIT 0,5 [ RunTime:0.000909s ]
+---------------------------------------------------------------
+[ 2018-09-04T22:20:29+08:00 ] ::1 ::1 GET /public/index.php/admin/article/index.html
+[ info ] mesunlo.com/public/index.php/admin/article/index.html [运行时间：0.076782s][吞吐率：13.02req/s] [内存消耗：3,590.14kb] [文件加载：55]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'cache-control' => 'max-age=0',
+  'cookie' => 'PHPSESSID=81548217e51937f5c6b65a69705d4aa5',
+  'referer' => 'http://mesunlo.com/public/index.php/admin/tag/index.html',
+  'upgrade-insecure-requests' => '1',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->index[ /Applications/MAMP/htdocs/mesunglo/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/mesunglo/public/../application/admin/view/article/index.html [ array (
+  0 => 'field',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000796s ] mysql:dbname=blog;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.005625s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 LIMIT 1 [ RunTime:0.000649s ]
+[ sql ] [ SQL ] SELECT `a`.`arc_id`,`a`.`arc_title`,`a`.`arc_author`,`a`.`sendtime`,`c`.`cate_name`,`a`.`arc_sort` FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 ORDER BY a.arc_sort desc,a.sendtime desc,a.arc_id desc LIMIT 0,5 [ RunTime:0.000435s ]
+---------------------------------------------------------------
+[ 2018-09-04T22:20:31+08:00 ] ::1 ::1 GET /public/index.php/admin/article/index.html
+[ info ] mesunlo.com/public/index.php/admin/article/index.html [运行时间：0.078788s][吞吐率：12.69req/s] [内存消耗：3,590.14kb] [文件加载：55]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'cache-control' => 'max-age=0',
+  'cookie' => 'PHPSESSID=81548217e51937f5c6b65a69705d4aa5',
+  'referer' => 'http://mesunlo.com/public/index.php/admin/tag/index.html',
+  'upgrade-insecure-requests' => '1',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->index[ /Applications/MAMP/htdocs/mesunglo/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/mesunglo/public/../application/admin/view/article/index.html [ array (
+  0 => 'field',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000325s ] mysql:dbname=blog;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.010502s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 LIMIT 1 [ RunTime:0.000685s ]
+[ sql ] [ SQL ] SELECT `a`.`arc_id`,`a`.`arc_title`,`a`.`arc_author`,`a`.`sendtime`,`c`.`cate_name`,`a`.`arc_sort` FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 ORDER BY a.arc_sort desc,a.sendtime desc,a.arc_id desc LIMIT 0,5 [ RunTime:0.000477s ]
+---------------------------------------------------------------
+[ 2018-09-04T22:20:32+08:00 ] ::1 ::1 GET /public/index.php/admin/article/index.html
+[ info ] mesunlo.com/public/index.php/admin/article/index.html [运行时间：0.074961s][吞吐率：13.34req/s] [内存消耗：3,590.14kb] [文件加载：55]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'cache-control' => 'max-age=0',
+  'cookie' => 'PHPSESSID=81548217e51937f5c6b65a69705d4aa5',
+  'referer' => 'http://mesunlo.com/public/index.php/admin/tag/index.html',
+  'upgrade-insecure-requests' => '1',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->index[ /Applications/MAMP/htdocs/mesunglo/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/mesunglo/public/../application/admin/view/article/index.html [ array (
+  0 => 'field',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000347s ] mysql:dbname=blog;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.009023s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 LIMIT 1 [ RunTime:0.000453s ]
+[ sql ] [ SQL ] SELECT `a`.`arc_id`,`a`.`arc_title`,`a`.`arc_author`,`a`.`sendtime`,`c`.`cate_name`,`a`.`arc_sort` FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 ORDER BY a.arc_sort desc,a.sendtime desc,a.arc_id desc LIMIT 0,5 [ RunTime:0.000422s ]
+---------------------------------------------------------------
+[ 2018-09-04T22:20:33+08:00 ] ::1 ::1 GET /public/index.php/admin/article/index.html
+[ info ] mesunlo.com/public/index.php/admin/article/index.html [运行时间：0.077083s][吞吐率：12.97req/s] [内存消耗：3,590.14kb] [文件加载：55]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'cache-control' => 'max-age=0',
+  'cookie' => 'PHPSESSID=81548217e51937f5c6b65a69705d4aa5',
+  'referer' => 'http://mesunlo.com/public/index.php/admin/tag/index.html',
+  'upgrade-insecure-requests' => '1',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->index[ /Applications/MAMP/htdocs/mesunglo/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/mesunglo/public/../application/admin/view/article/index.html [ array (
+  0 => 'field',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000361s ] mysql:dbname=blog;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.010804s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 LIMIT 1 [ RunTime:0.000484s ]
+[ sql ] [ SQL ] SELECT `a`.`arc_id`,`a`.`arc_title`,`a`.`arc_author`,`a`.`sendtime`,`c`.`cate_name`,`a`.`arc_sort` FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 ORDER BY a.arc_sort desc,a.sendtime desc,a.arc_id desc LIMIT 0,5 [ RunTime:0.000446s ]
+---------------------------------------------------------------
+[ 2018-09-04T22:20:34+08:00 ] ::1 ::1 GET /public/index.php/admin/article/index.html
+[ info ] mesunlo.com/public/index.php/admin/article/index.html [运行时间：0.075303s][吞吐率：13.28req/s] [内存消耗：3,590.14kb] [文件加载：55]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'cache-control' => 'max-age=0',
+  'cookie' => 'PHPSESSID=81548217e51937f5c6b65a69705d4aa5',
+  'referer' => 'http://mesunlo.com/public/index.php/admin/tag/index.html',
+  'upgrade-insecure-requests' => '1',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->index[ /Applications/MAMP/htdocs/mesunglo/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/mesunglo/public/../application/admin/view/article/index.html [ array (
+  0 => 'field',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000329s ] mysql:dbname=blog;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.010101s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 LIMIT 1 [ RunTime:0.000936s ]
+[ sql ] [ SQL ] SELECT `a`.`arc_id`,`a`.`arc_title`,`a`.`arc_author`,`a`.`sendtime`,`c`.`cate_name`,`a`.`arc_sort` FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 ORDER BY a.arc_sort desc,a.sendtime desc,a.arc_id desc LIMIT 0,5 [ RunTime:0.000606s ]
+---------------------------------------------------------------
+[ 2018-09-04T22:20:55+08:00 ] ::1 ::1 GET /public/index.php/admin/article/index.html
+[ info ] mesunlo.com/public/index.php/admin/article/index.html [运行时间：0.084690s][吞吐率：11.81req/s] [内存消耗：3,590.41kb] [文件加载：55]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'cache-control' => 'max-age=0',
+  'cookie' => 'PHPSESSID=81548217e51937f5c6b65a69705d4aa5',
+  'referer' => 'http://mesunlo.com/public/index.php/admin/tag/index.html',
+  'upgrade-insecure-requests' => '1',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->index[ /Applications/MAMP/htdocs/mesunglo/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/mesunglo/public/../application/admin/view/article/index.html [ array (
+  0 => 'field',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000600s ] mysql:dbname=blog;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.010093s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 LIMIT 1 [ RunTime:0.000635s ]
+[ sql ] [ SQL ] SELECT `a`.`arc_id`,`a`.`arc_title`,`a`.`arc_author`,`a`.`sendtime`,`c`.`cate_name`,`a`.`arc_sort` FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 ORDER BY a.arc_sort desc,a.sendtime desc,a.arc_id desc LIMIT 0,5 [ RunTime:0.001151s ]
+---------------------------------------------------------------
+[ 2018-09-04T22:20:57+08:00 ] ::1 ::1 GET /public/index.php/admin/article/index.html
+[ info ] mesunlo.com/public/index.php/admin/article/index.html [运行时间：0.078623s][吞吐率：12.72req/s] [内存消耗：3,590.14kb] [文件加载：55]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'cache-control' => 'max-age=0',
+  'cookie' => 'PHPSESSID=81548217e51937f5c6b65a69705d4aa5',
+  'referer' => 'http://mesunlo.com/public/index.php/admin/tag/index.html',
+  'upgrade-insecure-requests' => '1',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->index[ /Applications/MAMP/htdocs/mesunglo/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/mesunglo/public/../application/admin/view/article/index.html [ array (
+  0 => 'field',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000642s ] mysql:dbname=blog;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.011245s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 LIMIT 1 [ RunTime:0.000631s ]
+[ sql ] [ SQL ] SELECT `a`.`arc_id`,`a`.`arc_title`,`a`.`arc_author`,`a`.`sendtime`,`c`.`cate_name`,`a`.`arc_sort` FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 ORDER BY a.arc_sort desc,a.sendtime desc,a.arc_id desc LIMIT 0,5 [ RunTime:0.001977s ]
+---------------------------------------------------------------
+[ 2018-09-04T22:20:58+08:00 ] ::1 ::1 GET /public/index.php/admin/article/index.html
+[ info ] mesunlo.com/public/index.php/admin/article/index.html [运行时间：0.073523s][吞吐率：13.60req/s] [内存消耗：3,590.14kb] [文件加载：55]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'cache-control' => 'max-age=0',
+  'cookie' => 'PHPSESSID=81548217e51937f5c6b65a69705d4aa5',
+  'referer' => 'http://mesunlo.com/public/index.php/admin/tag/index.html',
+  'upgrade-insecure-requests' => '1',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->index[ /Applications/MAMP/htdocs/mesunglo/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/mesunglo/public/../application/admin/view/article/index.html [ array (
+  0 => 'field',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000369s ] mysql:dbname=blog;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.010315s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 LIMIT 1 [ RunTime:0.000955s ]
+[ sql ] [ SQL ] SELECT `a`.`arc_id`,`a`.`arc_title`,`a`.`arc_author`,`a`.`sendtime`,`c`.`cate_name`,`a`.`arc_sort` FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 ORDER BY a.arc_sort desc,a.sendtime desc,a.arc_id desc LIMIT 0,5 [ RunTime:0.000781s ]
+---------------------------------------------------------------
+[ 2018-09-04T22:22:04+08:00 ] ::1 ::1 GET /public/index.php/admin/article/index.html
+[ info ] mesunlo.com/public/index.php/admin/article/index.html [运行时间：0.090018s][吞吐率：11.11req/s] [内存消耗：3,589.67kb] [文件加载：55]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'cookie' => 'PHPSESSID=81548217e51937f5c6b65a69705d4aa5',
+  'upgrade-insecure-requests' => '1',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->index[ /Applications/MAMP/htdocs/mesunglo/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/mesunglo/public/../application/admin/view/article/index.html [ array (
+  0 => 'field',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000537s ] mysql:dbname=blog;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.010312s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 LIMIT 1 [ RunTime:0.000836s ]
+[ sql ] [ SQL ] SELECT `a`.`arc_id`,`a`.`arc_title`,`a`.`arc_author`,`a`.`sendtime`,`c`.`cate_name`,`a`.`arc_sort` FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 ORDER BY a.arc_sort desc,a.sendtime desc,a.arc_id desc LIMIT 0,5 [ RunTime:0.000727s ]
+---------------------------------------------------------------
+[ 2018-09-04T22:22:45+08:00 ] ::1 ::1 GET /public/index.php/admin/article/index.html
+[ info ] mesunlo.com/public/index.php/admin/article/index.html [运行时间：0.070477s][吞吐率：14.19req/s] [内存消耗：3,590.32kb] [文件加载：55]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'cache-control' => 'max-age=0',
+  'cookie' => 'PHPSESSID=81548217e51937f5c6b65a69705d4aa5',
+  'referer' => 'http://mesunlo.com/public/index.php/admin/tag/index.html',
+  'upgrade-insecure-requests' => '1',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->index[ /Applications/MAMP/htdocs/mesunglo/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/mesunglo/public/../application/admin/view/article/index.html [ array (
+  0 => 'field',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000370s ] mysql:dbname=blog;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.007554s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 LIMIT 1 [ RunTime:0.000406s ]
+[ sql ] [ SQL ] SELECT `a`.`arc_id`,`a`.`arc_title`,`a`.`arc_author`,`a`.`sendtime`,`c`.`cate_name`,`a`.`arc_sort` FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 ORDER BY a.arc_sort desc,a.sendtime desc,a.arc_id desc LIMIT 0,5 [ RunTime:0.000419s ]
+---------------------------------------------------------------
+[ 2018-09-04T22:22:47+08:00 ] ::1 ::1 GET /public/index.php/admin/article/index.html
+[ info ] mesunlo.com/public/index.php/admin/article/index.html [运行时间：0.069775s][吞吐率：14.33req/s] [内存消耗：3,590.14kb] [文件加载：55]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'cache-control' => 'max-age=0',
+  'cookie' => 'PHPSESSID=81548217e51937f5c6b65a69705d4aa5',
+  'referer' => 'http://mesunlo.com/public/index.php/admin/tag/index.html',
+  'upgrade-insecure-requests' => '1',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->index[ /Applications/MAMP/htdocs/mesunglo/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/mesunglo/public/../application/admin/view/article/index.html [ array (
+  0 => 'field',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000364s ] mysql:dbname=blog;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.007890s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 LIMIT 1 [ RunTime:0.000298s ]
+[ sql ] [ SQL ] SELECT `a`.`arc_id`,`a`.`arc_title`,`a`.`arc_author`,`a`.`sendtime`,`c`.`cate_name`,`a`.`arc_sort` FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 ORDER BY a.arc_sort desc,a.sendtime desc,a.arc_id desc LIMIT 0,5 [ RunTime:0.000507s ]
+---------------------------------------------------------------
+[ 2018-09-04T22:22:47+08:00 ] ::1 ::1 GET /public/index.php/admin/article/index.html
+[ info ] mesunlo.com/public/index.php/admin/article/index.html [运行时间：0.077541s][吞吐率：12.90req/s] [内存消耗：3,590.14kb] [文件加载：55]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'cache-control' => 'max-age=0',
+  'cookie' => 'PHPSESSID=81548217e51937f5c6b65a69705d4aa5',
+  'referer' => 'http://mesunlo.com/public/index.php/admin/tag/index.html',
+  'upgrade-insecure-requests' => '1',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->index[ /Applications/MAMP/htdocs/mesunglo/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/mesunglo/public/../application/admin/view/article/index.html [ array (
+  0 => 'field',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000337s ] mysql:dbname=blog;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.006923s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 LIMIT 1 [ RunTime:0.001168s ]
+[ sql ] [ SQL ] SELECT `a`.`arc_id`,`a`.`arc_title`,`a`.`arc_author`,`a`.`sendtime`,`c`.`cate_name`,`a`.`arc_sort` FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 ORDER BY a.arc_sort desc,a.sendtime desc,a.arc_id desc LIMIT 0,5 [ RunTime:0.000820s ]
+---------------------------------------------------------------
+[ 2018-09-04T22:23:08+08:00 ] ::1 ::1 GET /public/index.php/admin/article/index.html?
+[ info ] mesunlo.com/public/index.php/admin/article/index.html? [运行时间：0.079703s][吞吐率：12.55req/s] [内存消耗：3,589.84kb] [文件加载：55]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'cookie' => 'PHPSESSID=81548217e51937f5c6b65a69705d4aa5',
+  'upgrade-insecure-requests' => '1',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->index[ /Applications/MAMP/htdocs/mesunglo/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/mesunglo/public/../application/admin/view/article/index.html [ array (
+  0 => 'field',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000529s ] mysql:dbname=blog;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.009151s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 LIMIT 1 [ RunTime:0.000609s ]
+[ sql ] [ SQL ] SELECT `a`.`arc_id`,`a`.`arc_title`,`a`.`arc_author`,`a`.`sendtime`,`c`.`cate_name`,`a`.`arc_sort` FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 ORDER BY a.arc_sort desc,a.sendtime desc,a.arc_id desc LIMIT 0,5 [ RunTime:0.000538s ]
+---------------------------------------------------------------
+[ 2018-09-04T22:24:07+08:00 ] ::1 ::1 GET /public/index.php/admin/article/index.html?
+[ info ] mesunlo.com/public/index.php/admin/article/index.html? [运行时间：0.112537s][吞吐率：8.89req/s] [内存消耗：3,806.04kb] [文件加载：57]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'article',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'cache-control' => 'max-age=0',
+  'cookie' => 'PHPSESSID=81548217e51937f5c6b65a69705d4aa5',
+  'upgrade-insecure-requests' => '1',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Article->index[ /Applications/MAMP/htdocs/mesunglo/application/admin/controller/Article.php ]
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/mesunglo/public/../application/admin/view/article/index.html [ array (
+  0 => 'field',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000385s ] mysql:dbname=blog;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_article` [ RunTime:0.009929s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 LIMIT 1 [ RunTime:0.000825s ]
+[ sql ] [ SQL ] SELECT `a`.`arc_id`,`a`.`arc_title`,`a`.`arc_author`,`a`.`sendtime`,`c`.`cate_name`,`a`.`arc_sort` FROM `blog_article` `a` INNER JOIN `blog_cate` `c` ON `a`.`cate_id`=`c`.`cate_id` WHERE  `a`.`is_recycle` = 2 ORDER BY a.arc_sort desc,a.sendtime desc,a.arc_id desc LIMIT 0,5 [ RunTime:0.000653s ]
+---------------------------------------------------------------
+[ 2018-09-04T22:24:11+08:00 ] ::1 ::1 GET /public/index.php/admin/tag/index.html
+[ info ] mesunlo.com/public/index.php/admin/tag/index.html [运行时间：0.077551s][吞吐率：12.89req/s] [内存消耗：3,749.45kb] [文件加载：57]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'tag',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'cookie' => 'PHPSESSID=81548217e51937f5c6b65a69705d4aa5',
+  'referer' => 'http://mesunlo.com/public/index.php/admin/article/index.html?',
+  'upgrade-insecure-requests' => '1',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Tag->index[ /Applications/MAMP/htdocs/mesunglo/application/admin/controller/Tag.php ]
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/mesunglo/public/../application/admin/view/tag/index.html [ array (
+  0 => 'field',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000354s ] mysql:dbname=blog;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_tag` [ RunTime:0.006940s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_tag` LIMIT 1 [ RunTime:0.000287s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_tag` LIMIT 0,5 [ RunTime:0.000294s ]
+---------------------------------------------------------------
+[ 2018-09-04T22:24:14+08:00 ] ::1 ::1 GET /public/index.php/admin/category/index.html
+[ info ] mesunlo.com/public/index.php/admin/category/index.html [运行时间：0.090172s][吞吐率：11.09req/s] [内存消耗：3,724.63kb] [文件加载：56]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'cookie' => 'PHPSESSID=81548217e51937f5c6b65a69705d4aa5',
+  'referer' => 'http://mesunlo.com/public/index.php/admin/tag/index.html',
+  'upgrade-insecure-requests' => '1',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Category->index[ /Applications/MAMP/htdocs/mesunglo/application/admin/controller/Category.php ]
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/mesunglo/public/../application/admin/view/category/index.html [ array (
+  0 => 'field',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000502s ] mysql:dbname=blog;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_cate` [ RunTime:0.005701s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` ORDER BY cate_sort desc,cate_id [ RunTime:0.001279s ]
+---------------------------------------------------------------
+[ 2018-09-04T22:24:38+08:00 ] ::1 ::1 GET /public/index.php/admin/category/index.html
+[ info ] mesunlo.com/public/index.php/admin/category/index.html [运行时间：0.085066s][吞吐率：11.76req/s] [内存消耗：3,725.13kb] [文件加载：56]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'cache-control' => 'max-age=0',
+  'cookie' => 'PHPSESSID=81548217e51937f5c6b65a69705d4aa5',
+  'referer' => 'http://mesunlo.com/public/index.php/admin/tag/index.html',
+  'upgrade-insecure-requests' => '1',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Category->index[ /Applications/MAMP/htdocs/mesunglo/application/admin/controller/Category.php ]
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/mesunglo/public/../application/admin/view/category/index.html [ array (
+  0 => 'field',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000564s ] mysql:dbname=blog;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_cate` [ RunTime:0.007008s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_cate` ORDER BY cate_sort desc,cate_id [ RunTime:0.000397s ]
+---------------------------------------------------------------
+[ 2018-09-04T22:24:44+08:00 ] ::1 ::1 GET /public/index.php/admin/tag/index.html
+[ info ] mesunlo.com/public/index.php/admin/tag/index.html [运行时间：0.082861s][吞吐率：12.07req/s] [内存消耗：3,749.47kb] [文件加载：57]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'tag',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'cookie' => 'PHPSESSID=81548217e51937f5c6b65a69705d4aa5',
+  'referer' => 'http://mesunlo.com/public/index.php/admin/category/index.html',
+  'upgrade-insecure-requests' => '1',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Tag->index[ /Applications/MAMP/htdocs/mesunglo/application/admin/controller/Tag.php ]
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/mesunglo/public/../application/admin/view/tag/index.html [ array (
+  0 => 'field',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000540s ] mysql:dbname=blog;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_tag` [ RunTime:0.010281s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_tag` LIMIT 1 [ RunTime:0.000447s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_tag` LIMIT 0,5 [ RunTime:0.000312s ]
+---------------------------------------------------------------
+[ 2018-09-04T22:24:48+08:00 ] ::1 ::1 GET /public/index.php/admin/tag/del.html?tag_id=4
+[ info ] mesunlo.com/public/index.php/admin/tag/del.html?tag_id=4 [运行时间：0.103650s][吞吐率：9.65req/s] [内存消耗：3,500.02kb] [文件加载：56]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'tag',
+    2 => 'del',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'cookie' => 'PHPSESSID=81548217e51937f5c6b65a69705d4aa5',
+  'referer' => 'http://mesunlo.com/public/index.php/admin/tag/index.html',
+  'upgrade-insecure-requests' => '1',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+  'tag_id' => '4',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Tag->del[ /Applications/MAMP/htdocs/mesunglo/application/admin/controller/Tag.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/mesunglo/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000309s ] mysql:dbname=blog;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_tag` [ RunTime:0.010071s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_tag` WHERE  `tag_id` = 4 [ RunTime:0.000765s ]
+[ sql ] [ SQL ] DELETE FROM `blog_tag`    WHERE  `tag_id` = 4 [ RunTime:0.000324s ]
+---------------------------------------------------------------
+[ 2018-09-04T22:24:52+08:00 ] ::1 ::1 GET /public/index.php/admin/tag/index.html
+[ info ] mesunlo.com/public/index.php/admin/tag/index.html [运行时间：0.075040s][吞吐率：13.33req/s] [内存消耗：3,536.25kb] [文件加载：55]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/mesunglo/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'tag',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'mesunlo.com',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:61.0) Gecko/20100101 Firefox/61.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'cookie' => 'PHPSESSID=81548217e51937f5c6b65a69705d4aa5',
+  'referer' => 'http://mesunlo.com/public/index.php/admin/tag/del.html?tag_id=4',
+  'upgrade-insecure-requests' => '1',
+  'x-lantern-version' => '4.7.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Tag->index[ /Applications/MAMP/htdocs/mesunglo/application/admin/controller/Tag.php ]
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/mesunglo/public/../application/admin/view/tag/index.html [ array (
+  0 => 'field',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000474s ] mysql:dbname=blog;host=localhost;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `blog_tag` [ RunTime:0.010211s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `blog_tag` LIMIT 1 [ RunTime:0.000558s ]
+[ sql ] [ SQL ] SELECT * FROM `blog_tag` LIMIT 0,5 [ RunTime:0.000448s ]
